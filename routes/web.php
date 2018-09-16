@@ -13,6 +13,4 @@
 
 Route::get('/',['as'=>'getPopular','uses'=> 'ShopController@getPopular']);
 
-Route::get('/detail', function () {
-    return view('detail');
-});
+Route::get('/detail/{id}',['as'=> 'detailMovie','uses'=>'ShopController@getDetail']);

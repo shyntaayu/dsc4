@@ -6,28 +6,25 @@
                 <div class="product-quick-view">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
-                            <div class="quick-view-carousel-details">
-                                <div class="item" style="background: url(img/q1.jpg);">
-
-                                </div>
-                                <div class="item" style="background: url(img/q1.jpg);">
-
-                                </div>
-                                <div class="item" style="background: url(img/q1.jpg);">
-
+                            <div class="">
+                            <div class="item">
+<img class="content-image img-fluid d-block mx-auto" src="https://image.tmdb.org/t/p/original/{{$detail->poster_path}}">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="quick-view-content">
                                 <div class="top">
-                                    <h3 class="head">Faded SkyBlu Denim Jeans</h3>
+                                    <h3 class="head">{{$detail->original_title}}</h3>
                                     <div class="price d-flex align-items-center"><span class="lnr lnr-tag"></span> <span class="ml-10">$149.99</span></div>
-                                    <div class="category">Category: <span>Household</span></div>
+                                    <div class="category">Category: 
+                                    @foreach($detail->genres as $category)
+                                    <span>{{$category->name}}</span>
+                                    @endforeach</div>
                                     <div class="available">Availibility: <span>In Stock</span></div>
                                 </div>
                                 <div class="middle">
-                                    <p class="content">Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for something that can make your interior look awesome, and at the same time give you the pleasant warm feeling during the winter.</p>
+                                    <p class="content">{{$detail->overview}}</p>
                                 </div>
                                 <div >
                                     <div class="quantity-container d-flex align-items-center mt-15">
