@@ -11,10 +11,11 @@
 						</div>
 					</div>
 					<div class="row">
+                        @for($i=0;$i<4;$i++)
 						<div class="col-lg-3 col-md-6 single-product">
 						  <div class="content">
 						      <div class="content-overlay"></div>
-						  		 <img class="content-image img-fluid d-block mx-auto" src="img/l5.jpg" alt="">
+						  		 <img class="content-image img-fluid d-block mx-auto" src="https://image.tmdb.org/t/p/original/{{$popular[$i]->poster_path}}" alt="">
 						      <div class="content-details fadeIn-bottom">
 							        <div class="bottom d-flex align-items-center justify-content-center">
 										<a href="#"><span class="lnr lnr-heart"></span></a>
@@ -25,64 +26,11 @@
 						      </div>
 						  </div>
 						  <div class="price">
-						  		<h5>Long Sleeve shirt</h5>
-						  		<h3>$150.00</h3>
+						  		<h5>{{$popular[$i]->original_title}}</h5>
+						  		<h3>{{$popular[$i]->vote_average}}</h3>
 						   </div>						  
-						</div>	
-						<div class="col-lg-3 col-md-6 single-product">
-						  <div class="content">
-						      <div class="content-overlay"></div>
-						  		 <img class="content-image img-fluid d-block mx-auto" src="img/l6.jpg" alt="">
-						      <div class="content-details fadeIn-bottom">
-							        <div class="bottom d-flex align-items-center justify-content-center">
-										<a href="#"><span class="lnr lnr-heart"></span></a>
-										<a href="#"><span class="lnr lnr-layers"></span></a>
-										<a href="#"><span class="lnr lnr-cart"></span></a>
-										<a href="#" data-toggle="modal" data-target="#exampleModal"><span class="lnr lnr-frame-expand"></span></a>
-									</div>
-						      </div>
-						  </div>
-						  <div class="price">
-						  		<h5>Long Sleeve shirt</h5>
-						  		<h3>$150.00</h3>
-						   </div>						  
-						</div>	
-						<div class="col-lg-3 col-md-6 single-product">
-						  <div class="content">
-						      <div class="content-overlay"></div>
-						  		 <img class="content-image img-fluid d-block mx-auto" src="img/l7.jpg" alt="">
-						      <div class="content-details fadeIn-bottom">
-							        <div class="bottom d-flex align-items-center justify-content-center">
-										<a href="#"><span class="lnr lnr-heart"></span></a>
-										<a href="#"><span class="lnr lnr-layers"></span></a>
-										<a href="#"><span class="lnr lnr-cart"></span></a>
-										<a href="#" data-toggle="modal" data-target="#exampleModal"><span class="lnr lnr-frame-expand"></span></a>
-									</div>
-						      </div>
-						  </div>
-						  <div class="price">
-						  		<h5>Long Sleeve shirt</h5>
-						  		<h3>$150.00</h3>
-						   </div>						  
-						</div>	
-						<div class="col-lg-3 col-md-6 single-product">
-						  <div class="content">
-						      <div class="content-overlay"></div>
-						  		 <img class="content-image img-fluid d-block mx-auto" src="img/l8.jpg" alt="">
-						      <div class="content-details fadeIn-bottom">
-							        <div class="bottom d-flex align-items-center justify-content-center">
-										<a href="#"><span class="lnr lnr-heart"></span></a>
-										<a href="#"><span class="lnr lnr-layers"></span></a>
-										<a href="#"><span class="lnr lnr-cart"></span></a>
-										<a href="#" data-toggle="modal" data-target="#exampleModal"><span class="lnr lnr-frame-expand"></span></a>
-									</div>
-						      </div>
-						  </div>
-						  <div class="price">
-						  		<h5>Long Sleeve shirt</h5>
-						  		<h3>$150.00</h3>
-						   </div>						  
-						</div>																			
+                        </div>
+                        @endfor																				
 					</div>
 				</div>	
 			</section>
